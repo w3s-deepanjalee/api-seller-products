@@ -13,22 +13,48 @@ class CommonApiController extends Controller
 {
     public function productDetails($sellerProductId)
     {
-       // dd($sellerProductId);
-  //  $sellerProductId = decrypt($sellerProductId);
-     $sellerProduct = SellerProduct::find($sellerProductId);
-     return ProductSelectResource::make($sellerProduct);
+        try {
+            $sellerProductId = decrypt($sellerProductId);
+            $sellerProduct = SellerProduct::find($sellerProductId);
+            if ($sellerProduct) {
+                return ProductSelectResource::make($sellerProduct);
+            } else {
+                return response()->json(['message' => 'Product not found'], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Product not found'], 404);
+        }
     }
-    //getProductsBySeller
+
     public function getProductsBySeller($sellerId)
     {
-        $sellerProducts = SellerProduct::where('seller_id',$sellerId)->get();
-        return SellerProductsListResource::collection($sellerProducts);
+        try {
+            $sellerId = decrypt($sellerId);
+            $sellerProducts = SellerProduct::where('seller_id', $sellerId)->get();
+            if ($sellerProducts) {
+                return SellerProductsListResource::collection($sellerProducts);
+            } else {
+
+                return response()->json(['message' => 'Seller Product Not Found.'], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Seller Product Not Found.'], 404);
+        }
     }
     public function getSellerByProduct($sellerProductId)
     {
-        $sellerProduct = SellerProduct::where('id',$sellerProductId)->first();
-        $seller = $sellerProduct->seller;
+        try {
+            $sellerProductId = decrypt($sellerProductId);
+            $sellerProduct = SellerProduct::where('id', $sellerProductId)->first();
+            if ($sellerProduct) {
+                $seller = $sellerProduct->seller;
 
-       return SellerSelectResource::make($seller);
+                return SellerSelectResource::make($seller);
+            } else {
+                return response()->json(['message' => 'Seller Not Found.'], 404);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Seller Not Found.'], 404);
+        }
     }
 }
