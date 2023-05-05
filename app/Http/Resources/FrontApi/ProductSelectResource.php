@@ -21,7 +21,7 @@ class ProductSelectResource extends JsonResource
             'description' => $this->product->description ?? '',
             'price' => number_format($this->price, 2) ?? 0,
             'stock' => $this->stock ?? 0,
-            'seller_name' => $this->seller->seller_name ?? '',
+            'seller_name' => $this->seller->name ?? '',
         ];
     }
 }

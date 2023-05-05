@@ -15,11 +15,11 @@ class SellerSelectResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'=> $this->id ?? '',
             'seller_id'=> $this->id ?? '',
-            'seller_name'=> $this->seller_name ?? '',
-            'email'=> $this->seller_email ?? '',
-            'mobile'=> $this->seller_mobile ?? '',
+            'seller_name'=> $this->name ?? '',
+            'email'=> $this->email ?? '',
+            'mobile'=> $this->mobile ?? '',
+            'address'=> $this->address ?? '',
         ];
     }
 }

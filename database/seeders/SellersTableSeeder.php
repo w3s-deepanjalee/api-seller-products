@@ -22,19 +22,21 @@ class SellersTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'seller_name' => 'seller 1',
-                'seller_email' => 'seller1@gmail.com',
-                'seller_mobile' => '0770000000',
-                'created_at' => '2023-05-03 22:53:17',
+                'name' => 'seller 1',
+                'email' => 'seller1@gmail.com',
+                'mobile' => '0770000001',
+                'address' => 'Piliyandala',
+                'created_at' => '2023-05-05 17:52:24',
                 'updated_at' => NULL,
             ),
             1 => 
             array (
                 'id' => 2,
-                'seller_name' => 'seller 2',
-                'seller_email' => 'seller2@gmail.com',
-                'seller_mobile' => '0774744441',
-                'created_at' => '2023-05-03 22:53:39',
+                'name' => 'seller 2',
+                'email' => 'seller2@gmail.com',
+                'mobile' => '0770000002',
+                'address' => 'Moratuwa',
+                'created_at' => '2023-05-05 17:52:58',
                 'updated_at' => NULL,
             ),
         ));

@@ -16,7 +16,7 @@ class SellerProductsListResource extends JsonResource
     {
         return [
             'id'=> $this->id ?? '',
-            'seller' => $this->seller->seller_name ?? '',
+            'seller' => $this->seller->name ?? '',
             'product_name'=> $this->product->product_name ?? '',
             'image_url'=> $this->product->image_url ?? '',
             'stock'=> $this->stock ?? 0,
