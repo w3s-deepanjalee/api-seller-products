@@ -27,6 +27,10 @@ php artisan serve
 ## API Documentation
 /request-docs
 
+## API Documentation user name & Password
+username: admin@gmail.com
+password: admin@gmail.com
+
 ## All API Route ID are Encrypt then use following Encrypt ID for ID (Eg: {sellerProductId})
 # for ID 1: eyJpdiI6IlZFMjJzcjAzcTluT0d3ZG5zeWRwRHc9PSIsInZhbHVlIjoic2h5STZUWkhOZi9mY2Z6cmdtRkhaZz09IiwibWFjIjoiNzQxY2YxMDFjOGFlZTAxNWI1NWVjZmY2MDg5ZjM2ZTk1NWQ2ZTAyYzYwMjNmZGYyOTU4N2IzOWY2Njg3MTllZCIsInRhZyI6IiJ9
 
