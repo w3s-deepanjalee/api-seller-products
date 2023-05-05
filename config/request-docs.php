@@ -10,9 +10,9 @@ return [
     * Route where request docs will be served from laravel app.
     * localhost:8080/request-docs
     */
-    'url' => 'api/request-docs',
+    'url' => 'request-docs',
     'middlewares' => [
-        // \Rakutentech\LaravelRequestDocs\NotFoundWhenProduction::class,
+      // \Rakutentech\LaravelRequestDocs\NotFoundWhenProduction::class,
     ],
 
     //Use only routes where ->uri start with next string Using Str::startWith( . e.g. - /api/mobile
