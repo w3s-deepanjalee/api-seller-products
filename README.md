@@ -10,6 +10,8 @@ npm install
 ## Copy the example environment file:
 ## rename to .env
 
+## Generate a new application key:
+
 ## Set up your database configuration in the .env file.
 
 ## create database
