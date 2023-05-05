@@ -13,6 +13,8 @@ return [
     'url' => 'request-docs',
     'middlewares' => [
       // \Rakutentech\LaravelRequestDocs\NotFoundWhenProduction::class,
+       \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+
     ],
 
     //Use only routes where ->uri start with next string Using Str::startWith( . e.g. - /api/mobile
