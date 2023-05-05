@@ -32,4 +32,8 @@ php artisan serve
 
 # for ID 2: eyJpdiI6IkVBSlB6SXFVRGNBMjdsaTFOV0Z6Q3c9PSIsInZhbHVlIjoiL1F2Wkg1SlkweFJBZWlEeGxiMkpwdz09IiwibWFjIjoiYmUwMTU5YjUxYzdhZjg0NTBhZWY0YjUzZTgyNDdkZTY2YzNkMjdiY2E4ZmY2OGQ5N2M0NDBiODY0OGZiZTgyMyIsInRhZyI6IiJ9 
 
+# use bellow code to generate Encrypt ID
+encrypt(1) 
+
+# welcome blade uncomment the  {{ dd(encrypt(1)) }} to generate the Encrypt ID
 
